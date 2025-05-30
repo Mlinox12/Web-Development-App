@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Trendy Sneakers</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="top-navigation">
+            <div class="logo">TrendySneakers</div>
+           >
+            <div class="search-bar">
+                <input type="text" placeholder="Search for sneakers...">
+                <button type="submit">Search</button>
+            </div>
+            <div class="user-actions">
+  <a href="login.html" class="action-button">Login</a>
+  <a href="#" class="action-button cart">Cart (0)</a>
+</div>
+        </nav>
+
+```
+    <section class="hero-section">
+        <div class="slideshow-container">
+            <img src="pics/shoe1.jpg" alt="Featured Sneaker 1" class="slide fade">
+            <img src="pics/shoe2.jpg" alt="Featured Sneaker 2" class="slide fade">
+            <img src="pics/shoe3.jpg" alt="Featured Sneaker 3" class="slide fade">
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div class="hero-text">
+            <h2 class="fade-in-repeat">Get the Latest and Trending Sneakers</h2>
+            <p>Find your perfect pair and step out in style.</p>
+            <button class="shop-now-btn">Shop Now</button>
+        </div>
+    </section>
+</header>
+
+<main>
+    <section class="featured-categories">
+        <h3 class="cssanimation leMovingBackFromRight">Explore Top Categories</h3>
+        <div class="category-grid">
+            <div class="category-item">
+                <img src="pics/shoe4.jpg" alt="Category 1">
+                <p>Running</p>
+            </div>
+            <div class="category-item">
+                <img src="pics/shoe5.jpg" alt="Category 2">
+                <p>Casual</p>
+            </div>
+            <div class="category-item">
+                <img src="pics/shoe6.jpg" alt="Category 3">
+                <p>Basketball</p>
+            </div>
+        
+        </div>
+    </section>
+
+    <section class="new-arrivals">
+        <h3 class="fade-in-repeat">New Arrivals</h3>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="pics/shoe8.jpg" alt="New Arrival 1">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe9.jpg" alt="New Arrival 2">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe10.jpg" alt="New Arrival 3">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe11.jpg" alt="New Arrival 4">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe12.jpg" alt="New Arrival 5">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe13.jpg" alt="New Arrival 6">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe14.jpg" alt="New Arrival 7">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+            <div class="product-item">
+                <img src="pics/shoe15.jpg" alt="New Arrival 8">
+                <p>Product Name</p>
+                <p>$XX.XX</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="call-to-action">
+        <div class="cta-content">
+            <h3 class="fade-in-repeat">Find the Perfect Sneaker for You</h3>
+            <p>Explore our wide selection and discover your next favorite pair.</p>
+            <button class="browse-all-btn">Browse All</button>
+        </div>
+        <div class="cta-image">
+            <img src="pics/shoe16.jpg" alt="Perfect Sneaker">
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Information</h4>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Customer Service</h4>
+            <ul>
+                <li><a href="#">Shipping & Returns</a></li>
+                <li><a href="#">Size Guide</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Connect With Us</h4>
+            <p>Stay updated on our latest releases and offers.</p>
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a>
+                <a href="#" target="_blank">Twitter</a>
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 TrendySneakers. All rights reserved.</p>
+    </div>
+</footer>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function plusSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+    }
+</script>
+```
+
+</body>
+</html>
